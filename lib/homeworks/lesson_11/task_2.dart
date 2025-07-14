@@ -1,9 +1,8 @@
-Future<String> fetchAge() async {
-  await Future.delayed(Duration(milliseconds: 1500));
-  return '25';
+Future<String> fetchAge() {
+  return Future.delayed(Duration(milliseconds: 1500), () => '25');
 }
 
-Future<String> getAgeString() async {
+Future getAgeString() async {
   final String age = await fetchAge();
   final String formattedAge = formatAge(int.parse(age));
   return formattedAge;

@@ -1,4 +1,3 @@
-Future<String> fetchName() async {
-  await Future.delayed(Duration(seconds: 2));
-  return 'Андрій';
+Future<String> fetchName() {
+  return Future.delayed(Duration(seconds: 2), () => 'Андрій');
 }
