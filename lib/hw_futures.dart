@@ -5,18 +5,11 @@ void main() async {
   final Stopwatch stopwatch = Stopwatch();
   stopwatch.start();
 
-  await fetchName().then((name) {
-    print('Мене звати $name');
-  });
+  var value = await Future.wait([fetchName(), getAgeString()]);
+
+  print('Мене звати ${value[0]}');
+  print('Мені ${value[1]}');
 
   stopwatch.stop();
-  print('Час виконання запиту на ім\'я: ${stopwatch.elapsedMilliseconds} мс');
-
-  stopwatch.reset();
-  stopwatch.start();
-  final ageString = await getAgeString();
-  print('Мені $ageString');
-
-  stopwatch.stop();
-  print('Час виконання запиту на вік: ${stopwatch.elapsedMilliseconds} мс');
+  print('Час виконання запитів: ${stopwatch.elapsedMilliseconds} мс');
 }
