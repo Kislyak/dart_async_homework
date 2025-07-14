@@ -1,5 +1,5 @@
-import 'package:dart_async_homework/homeworks/lesson_11/task_7.dart';
+import 'package:dart_async_homework/homeworks/lesson_11/task_8.dart';
 
-void main() async {
-  await periodicStream(10);
+void main() {
+  useStreamController();
 }
