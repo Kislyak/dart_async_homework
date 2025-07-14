@@ -1,7 +1,7 @@
-import 'package:dart_async_homework/homeworks/lesson_11/task_1.dart';
+import 'package:dart_async_homework/homeworks/lesson_11/task_2.dart';
 
 void main() {
-  fetchName().then((name) {
-    print('Мене звати $name');
+  getAgeString().then((ageString) {
+    print('Мені $ageString');
   });
 }
